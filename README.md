@@ -1,5 +1,6 @@
-# 🎮 Tic Tac Toe
-🔗 [Live Preview](https://shivangi-verma.github.io/TicTacToe/)
+# 🎮 Tic Tac Toe  
+🔗 [Live Preview](https://shivangi-verma.github.io/TicTacToe/)  
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=shivangi-verma.TicTacToe)
 
 A simple Tic Tac Toe game built with **HTML, CSS, and JavaScript**. Play with a friend in this classic 3x3 game right in your browser.
 
