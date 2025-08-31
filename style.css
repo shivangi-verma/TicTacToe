@@ -1,0 +1,53 @@
+body{
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: large;
+}
+ 
+.container {  
+    margin: auto;
+    height: 50vh;
+    width:  50vw;
+    color: black;
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". . ."
+    ". . .";
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: initial;
+    appearance: initial;
+    background: rgb(78, 66, 84);
+    border: none;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+input[type="checkbox"]:checked {
+    background: rgb(255, 85, 130);
+}
+
+ input[type="checkbox"]:checked:after {
+    font-size: 50px;
+    content: attr(data-value);
+    color: #000000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.hidden{
+    display: none;
+} 
