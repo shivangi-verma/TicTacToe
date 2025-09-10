@@ -3,8 +3,8 @@ let playerCounter = 0;
 const playerO = "O";
 const playerX = "X";
 
-const playerOArr = [];
-const playerXArr = [];
+let playerOArr = [];
+let playerXArr = [];
 
 const winningPattern = [
   [0, 1, 2],
@@ -20,7 +20,6 @@ const winningPattern = [
 // function winnerCheck(arr, name) {
 //   for (i in winningPattern) {
 //     var [a, b, c] = winningPattern[i];
-     
 
 //     var check = arr.includes(a) && arr.includes(b) && arr.includes(c);
 //     console.log("check = " + check);
@@ -32,42 +31,48 @@ const winningPattern = [
 //   console.log(name + " = " + arr);
 // }
 
-
-
 function checkboxHandler(checkbox) {
   if (playerCounter % 2 == 0) {
     console.log(checkbox.id);
     playerOArr.push(Number(checkbox.id));
     document.getElementById(checkbox.id).setAttribute("data-value", "O");
-    winnerCheck(playerOArr, "PO");
+    winnerCheck(playerOArr, "O");
     playerCounter++;
   } else {
     console.log(checkbox.id);
     playerXArr.push(Number(checkbox.id));
     document.getElementById(checkbox.id).setAttribute("data-value", "X");
-    winnerCheck(playerXArr, "PX");
+    winnerCheck(playerXArr, "X");
     playerCounter++;
   }
 }
 
+function winnerCheck(arr, name) {
+  for (let [a, b, c] of winningPattern) {
+    let check = arr.includes(a) && arr.includes(b) && arr.includes(c);
 
-function winnerCheck(arr, name){
-    for (let [a,b,c] of winningPattern) {
-        let check = arr.includes(a) && arr.includes(b) && arr.includes(c);
-        
-        if (check){
-            console.log("winner is " + name);
+    if (check) {
+      console.log("winner is " + name);
 
-            // 🎉 Fire confetti
-            confetti({
-                particleCount: 150,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
-            window.alert(`Winner is ${name}`)
-            return true; // stop after win
-            
-        }
-    }   
-    return false;
+      // 🎉 Fire confetti
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+      // window.alert(`Winner is ${name}`)
+      document.querySelector("#winner").classList.toggle("hidden");
+      document.querySelector("#winner").textContent = `${name} is Winner!`;
+
+      return true; // stop after win
+    }
+  }
+  return false;
+}
+
+function resetHandler() {
+  console.log("Reset Button Clicked!");
+  playerOArr = "";
+  playerXArr = "";
+  playerCounter = 0;
 }

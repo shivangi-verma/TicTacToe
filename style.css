@@ -1,17 +1,17 @@
-body{
-    /* background-color: black; */
-    color: rgb(0, 0, 0);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    font-size: large;
+body {
+  /* background-color: black; */
+  color: rgb(0, 0, 0);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  font-size: large;
 }
- 
-.container {  
-    margin: auto;
-    height: 50vh;
-    width:  50vw;
-    color: black;
-    display: grid;
+
+.container {
+  margin: auto;
+  height: 50vh;
+  width: 50vw;
+  color: black;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 10px 10px;
@@ -22,32 +22,47 @@ body{
     ". . .";
 }
 
-input[type="checkbox"]{
-    -webkit-appearance: initial;
-    appearance: initial;
-    background: rgb(78, 66, 84);
-    border: none;
-    position: relative;
-    border-radius: 10px;
+input[type="checkbox"] {
+  -webkit-appearance: initial;
+  appearance: initial;
+  background: rgb(146, 133, 153);
+  border: none;
+  position: relative;
+  border-radius: 10px;
 }
-
 
 input[type="checkbox"]:checked {
-    background: rgb(255, 85, 130);
+  background: rgb(255, 85, 130);
 }
 
- input[type="checkbox"]:checked:after {
-    font-size: 50px;
-    content: attr(data-value);
-    color: #000000;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
+input[type="checkbox"]:checked:after {
+  font-size: 50px;
+  content: attr(data-value);
+  color: #000000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-.hidden{
-    display: none;
-} 
+.hidden {
+  display: none;
+}
+#resetBtn {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  color: white;
+  margin-top: 0px;
+  padding: 16px 36px;
+  background-color: rgb(57 106 202);
+  box-shadow: 5px 3px 11px -1px #888887;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: larger;
+  margin-top: 14px;
+  align-items: center;
+}
