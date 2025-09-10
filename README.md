@@ -1,12 +1,17 @@
 <h1 align="center">🎮 Tic Tac Toe</h1>
 
-<p align="center">
-  🔗 <a href="https://shivangi-verma.github.io/TicTacToe/">Live Preview</a>  
-</p>
+<table width="100%">
+<tr>
+  <td align="left">
+    <a href="https://shivangi-verma.github.io/TicTacToe/">🔗 Live Preview</a>
+  </td>
+  <td align="right">
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=shivangi-verma.TicTacToe" alt="Visitor Count" />
+  </td>
+</tr>
+</table>
 
-<p align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=shivangi-verma.TicTacToe" alt="Visitor Count" />
-</p>
+<img width="1313" height="1081" alt="image" src="https://github.com/user-attachments/assets/9403dbfc-1048-4434-9240-4ceff0c6fddd" />
 
 ---
 
